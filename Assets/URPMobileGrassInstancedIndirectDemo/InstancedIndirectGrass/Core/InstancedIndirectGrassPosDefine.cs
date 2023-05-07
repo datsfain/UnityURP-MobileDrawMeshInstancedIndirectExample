@@ -57,7 +57,6 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
         var count = 0;
 
-
         for (var x = startX; x < endX; x += 1 / _densityPerUnit)
         {
             for (var z = startZ; z < endZ; z += 1 / _densityPerUnit)

@@ -1216,7 +1216,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 105
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1227,7 +1227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 169566
+  m_Text: 'Grass Instances: 600066'
 --- !u!222 &1188843326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed67b81fb4b64d498a58bbb1c32d63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDistance: 120
+  drawDistance: 100
   instanceMaterial: {fileID: 2100000, guid: 2a0ca5d9e755e74448eaac7a643303db, type: 2}
   cullingComputeShader: {fileID: 7200000, guid: 4ff257ce2a1c37546a9b544e669e976b, type: 3}
 --- !u!4 &1709084318
@@ -1469,10 +1469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d6ee35f46cc6a449199c3d64518325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshCollider: {fileID: 800982362}
-  _randomRadius: 0.1
-  _countText: {fileID: 1188843325}
-  _densityPerUnit: 1.75
+  _boundsMeshCollider: {fileID: 800982362}
+  _randomPositionRadius: 0.1
+  _instanceCountMesh: {fileID: 1188843325}
+  _instanceCountTextFormat: 'Grass Instances: {0}'
+  _densityPerUnit: 3.29
 --- !u!1 &1721825726
 GameObject:
   m_ObjectHideFlags: 0

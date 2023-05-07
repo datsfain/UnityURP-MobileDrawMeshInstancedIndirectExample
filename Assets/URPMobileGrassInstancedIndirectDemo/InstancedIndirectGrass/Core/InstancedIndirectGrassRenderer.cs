@@ -8,6 +8,7 @@ using UnityEngine.Profiling;
 public class InstancedIndirectGrassRenderer : MonoBehaviour
 {
     [Header("Settings")]
+    [Range(10f, 250f)]
     public float drawDistance = 125;
     public Material instanceMaterial;
 

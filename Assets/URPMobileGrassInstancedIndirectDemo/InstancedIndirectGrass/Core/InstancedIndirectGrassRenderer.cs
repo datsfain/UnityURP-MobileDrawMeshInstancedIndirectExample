@@ -214,14 +214,11 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
                 return;
             }
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////
 
         Debug.Log("UpdateAllInstanceTransformBuffer (Slow)");
 
-        ///////////////////////////
         // allInstancesPosWSBuffer buffer
-        ///////////////////////////
+
         if (allInstancesPosWSBuffer != null)
             allInstancesPosWSBuffer.Release();
         allInstancesPosWSBuffer = new ComputeBuffer(allGrassPos.Count, sizeof(float)*3); //float3 posWS only, per grass
@@ -300,12 +297,9 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
 
         argsBuffer.SetData(args);
 
-        ///////////////////////////
         // Update Cache
-        ///////////////////////////
         //update cache to prevent future no-op buffer update, which waste performance
         instanceCountCache = allGrassPos.Count;
-
 
         //set buffer
         cullingComputeShader.SetBuffer(0, "_AllInstancesPosWSBuffer", allInstancesPosWSBuffer);

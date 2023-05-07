@@ -11,7 +11,6 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
     private int cacheCount = -1;
 
-    // Start is called before the first frame update
     void Start()
     {
         UpdatePosIfNeeded();
@@ -36,23 +35,19 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
         Debug.Log("UpdatePos (Slow)");
 
-        //same seed to keep grass visual the same
-        UnityEngine.Random.InitState(123);
+        Random.InitState(123);
 
-        //auto keep density the same
         float scale = Mathf.Sqrt((instanceCount / 4)) / 2f;
         transform.localScale = new Vector3(scale, transform.localScale.y, scale);
 
-        //////////////////////////////////////////////////////////////////////////
-        //can define any posWS in this section, random is just an example
-        //////////////////////////////////////////////////////////////////////////
+        // can define any posWS in this section, random is just an example
         List<Vector3> positions = new List<Vector3>(instanceCount);
         for (int i = 0; i < instanceCount; i++)
         {
             Vector3 pos = Vector3.zero;
 
-            pos.x = UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.x;
-            pos.z = UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.z;
+            pos.x = Random.Range(-1f, 1f) * transform.lossyScale.x;
+            pos.z = Random.Range(-1f, 1f) * transform.lossyScale.z;
 
             //transform to posWS in C#
             pos += transform.position;

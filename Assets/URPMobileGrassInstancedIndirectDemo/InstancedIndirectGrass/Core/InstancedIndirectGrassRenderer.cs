@@ -50,6 +50,8 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
     {
         UpdateAllInstanceTransformBufferIfNeeded();
 
+        if (cellPosWSsList == null) return;
+
         visibleCellIDList.Clear();//fill in this cell ID list using CPU frustum culling first
         Camera cam = Camera.main;
 
@@ -147,7 +149,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         instance = null;
     }
 
-    Mesh GetGrassMeshCache()
+    private Mesh GetGrassMeshCache()
     {
         if (!cachedGrassMesh)
         {
@@ -181,6 +183,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             return;
         }
 
+        if (allGrassPos.Count == 0) return;
 
         Debug.Log("UpdateAllInstanceTransformBuffer (Slow)");
 

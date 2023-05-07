@@ -96,11 +96,11 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BoundSize: {r: 23.973944, g: 23.973944, b: 0, a: 0}
+    - _BoundSize: {r: 79.05694, g: 79.05694, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.2195755, g: 0.46226418, b: 0.2581851, a: 1}
-    - _PivotPosWS: {r: 6.2, g: 0, b: 27.1, a: 0}
+    - _PivotPosWS: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WindADirection: {r: 0.1, g: 0.1, b: 0, a: 1}
     - _WindATiling: {r: 0.1, g: 0.1, b: 0, a: 1}

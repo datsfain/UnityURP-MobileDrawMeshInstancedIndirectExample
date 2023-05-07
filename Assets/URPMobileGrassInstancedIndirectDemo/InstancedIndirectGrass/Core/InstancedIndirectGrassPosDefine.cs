@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteAlways]
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
-    [Range(1, 40000000)]
+    [Range(160, 100000)]
     public int instanceCount = 1000000;
     public float drawDistance = 125;
 
@@ -13,21 +13,14 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
     void Start()
     {
-        UpdatePosIfNeeded();
+        cacheCount = -1;
     }
+
     private void Update()
     {
         UpdatePosIfNeeded();
     }
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(300, 50, 200, 30), "Instance Count: " + instanceCount / 1000000 + "Million");
-        instanceCount = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 100, 200, 30), instanceCount / 1000000f, 1, 10)) * 1000000);
 
-        GUI.Label(new Rect(300, 150, 200, 30), "Draw Distance: " + drawDistance);
-        drawDistance = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 200, 200, 30), drawDistance / 25f, 1, 8)) * 25);
-        InstancedIndirectGrassRenderer.instance.drawDistance = drawDistance;
-    }
     private void UpdatePosIfNeeded()
     {
         if (instanceCount == cacheCount)
